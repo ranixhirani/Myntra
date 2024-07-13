@@ -1,0 +1,101 @@
+user_id,height,weight,chest,waist,body_type
+1,170,70,90,80,hourglass
+2,165,60,85,75,pear
+3,180,80,100,90,rectangle
+4,175,75,95,85,inverted triangle
+5,160,55,80,70,round
+6,185,85,105,95,hourglass
+7,155,50,75,65,pear
+8,190,90,110,100,rectangle
+9,172,68,92,78,inverted triangle
+10,168,65,87,72,round
+11,167,70,88,77,hourglass
+12,162,59,84,74,pear
+13,177,79,98,89,rectangle
+14,174,74,94,84,inverted triangle
+15,159,54,79,69,round
+16,182,83,102,93,hourglass
+17,154,49,74,64,pear
+18,189,89,108,99,rectangle
+19,171,67,91,77,inverted triangle
+20,166,64,86,71,round
+21,173,72,92,81,hourglass
+22,168,62,87,76,pear
+23,183,82,101,91,rectangle
+24,176,77,96,86,inverted triangle
+25,161,57,81,69,round
+26,186,84,104,95,hourglass
+27,158,51,76,67,pear
+28,193,92,112,101,rectangle
+29,169,68,89,79,inverted triangle
+30,163,63,85,70,round
+31,171,71,90,78,hourglass
+32,166,61,86,74,pear
+33,180,81,99,90,rectangle
+34,175,76,93,83,inverted triangle
+35,160,56,80,68,round
+36,184,85,103,94,hourglass
+37,153,48,73,63,pear
+38,192,91,111,98,rectangle
+39,170,66,87,75,inverted triangle
+40,165,65,88,73,round
+41,172,69,91,79,hourglass
+42,167,58,83,72,pear
+43,178,77,97,87,rectangle
+44,177,72,95,82,inverted triangle
+45,157,53,78,68,round
+46,183,82,100,90,hourglass
+47,155,47,72,62,pear
+48,191,88,110,97,rectangle
+49,174,71,92,81,inverted triangle
+50,162,60,84,70,round
+51,169,70,89,77,hourglass
+52,164,59,85,73,pear
+53,179,78,98,88,rectangle
+54,178,73,96,83,inverted triangle
+55,159,55,79,67,round
+56,185,84,103,93,hourglass
+57,156,50,75,66,pear
+58,190,87,109,95,rectangle
+59,173,69,91,79,inverted triangle
+60,167,64,85,71,round
+61,171,70,90,80,hourglass
+62,165,60,85,75,pear
+63,180,80,100,90,rectangle
+64,175,75,95,85,inverted triangle
+65,160,55,80,70,round
+66,185,85,105,95,hourglass
+67,155,50,75,65,pear
+68,190,90,110,100,rectangle
+69,172,68,92,78,inverted triangle
+70,168,65,87,72,round
+71,167,70,88,77,hourglass
+72,162,59,84,74,pear
+73,177,79,98,89,rectangle
+74,174,74,94,84,inverted triangle
+75,159,54,79,69,round
+76,182,83,102,93,hourglass
+77,154,49,74,64,pear
+78,189,89,108,99,rectangle
+79,171,67,91,77,inverted triangle
+80,166,64,86,71,round
+81,173,72,92,81,hourglass
+82,168,62,87,76,pear
+83,183,82,101,91,rectangle
+84,176,77,96,86,inverted triangle
+85,161,57,81,69,round
+86,186,84,104,95,hourglass
+87,158,51,76,67,pear
+88,193,92,112,101,rectangle
+89,169,68,89,79,inverted triangle
+90,163,63,85,70,round
+91,171,71,90,78,hourglass
+92,166,61,86,74,pear
+93,180,81,99,90,rectangle
+94,175,76,93,83,inverted triangle
+95,160,56,80,68,round
+96,184,85,103,94,hourglass
+97,153,48,73,63,pear
+98,192,91,111,98,rectangle
+99,170,66,87,75,inverted triangle
+100,165,65,88,73,round

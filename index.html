@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Hackathon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-details {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Myntra Hackathon</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Trending Products</h3>
+            <div class="row">
+                {% for product in trending_products %}
+                    <div class="col-md-3 product-card">
+                        <img src="{{ random_product_image_urls[loop.index0] }}" class="product-image">
+                        <div class="product-details">
+                            <h5>{{ truncate(product.Name, 20) }}</h5>
+                            <p>{{ product.Brand }}</p>
+                            <p>Rating: {{ product.Rating }}</p>
+                            <p>Reviews: {{ product.ReviewCount }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3>Signup Form</h3>
+            <form method="POST" action="/signup">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Signup</button>
+                {% if signup_message %}
+                    <p>{{ signup_message }}</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Content Based Recommendations</h3>
+    <form method="POST" action="/recommendations">
+        <div class="form-group">
+            <label for="prod">Enter Product Name</label>
+            <input type="text" class="form-control" id="prod" name="prod" required>
+        </div>
+        <div class="form-group">
+            <label for="nbr">Number of Recommendations</label>
+            <input type="number" class="form-control" id="nbr" name="nbr" min="1" value="5" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Get Recommendations</button>
+    </form>
+
+    {% if content_based_rec %}
+        <h4 class="mt-4">Recommended Products</h4>
+        <div class="row">
+            {% for rec in content_based_rec.itertuples() %}
+                <div class="col-md-4 product-card">
+                    <img src="{{ random_product_image_urls[loop.index0] }}" class="product-image">
+                    <div class="product-details">
+                        <h5>{{ truncate(rec.Name, 20) }}</h5>
+                        <p>{{ rec.Brand }}</p>
+                        <p>Rating: {{ rec.Rating }}</p>
+                        <p>Reviews: {{ rec.ReviewCount }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-h6F2MSfaJc5qrlVRLZxuS/YVYCp3X0x7k3L12j8mp/05zL+0E50Hly3AXY2wDq9v"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+3W0pRRxUp5HQ6j3I+0n1E3w2GsibNWLi+K"
+        crossorigin="anonymous"></script>
+</body>
+</html>
